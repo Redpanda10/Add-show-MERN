@@ -51,20 +51,18 @@ router.delete('/:id', async (req, res) => {
 router.put('/:id', async (req, res) => {
   
   try {
-    const {id} = req.params.id;
-    const  {text}  = req.body;
-
-    if(!text){
+    
+    if(!req.body){
         return res.status(400).json({ message: 'Please enter a text' });
     }
-      const updatedData = await Data.findByIdAndUpdate(id, { text }, { new: true });
-      if (!updatedData) {
+      const updatedData = await Data.findByIdAndUpdate(req.params.id,req.body, { new: true });
+    if (!updatedData) {
         return res.status(404).json({ message: 'Data not found' });
-      }
+    }
 
-        res.status(200).json({ message: 'Data updated successfully' });
+    res.status(200).json(updatedData);
       
-  } catch (err) {
+    }catch(err){
       console.error(err);
       res.status(500).json('Server error');
   }
