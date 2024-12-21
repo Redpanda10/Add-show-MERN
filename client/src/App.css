@@ -1,0 +1,47 @@
+.input-container {
+    display: flex; /* Use flexbox to align input and button */
+    align-items: center; /* Center items vertically */
+}
+
+.input-container input {
+    margin-right: 10px; /* Space between input and button */
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+.task-item {
+    display: flex; /* Use flexbox to align text and button */
+    justify-content: space-between; /* Space between text and button */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 10px; /* Space between list items */
+}
+
+.delete-btn {
+    margin-left: 15px; /* Reduced space between text and delete button */
+    background-color: #f44336; /* Red background for delete button */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px 10px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.delete-btn:hover {
+    background-color: white; /* Change background on hover */
+    color: #f44336; /* Change text color on hover */
+    transition: 0.3s; /* Smooth transition */
+}
+.list-item{
+    
+    font-size: 20px;
+    margin-bottom: 10px;
+    max-width: 400px;
+}
+.main-board{
+    text-align: center;
+    width: max-content;
+    margin: 50px auto;
+}

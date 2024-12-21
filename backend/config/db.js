@@ -1,8 +1,9 @@
 // db.js
 const mongoose = require('mongoose');
 
-const mongoURL='mongodb://localhost:27017/newDatabase'
+const mongoURL='mongodb://localhost:27017/tasks'
 mongoose.connect(mongoURL)
+
 db=mongoose.connection
 // MongoDB connection function
 db.on('connected',()=>{
